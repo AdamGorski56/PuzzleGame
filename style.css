@@ -13,5 +13,46 @@ div{
     flex-basis: 15%;
     flex-grow: 1;
     height: 33.33vh;
+    background-color: black;
     border: 4px solid white;
+}
+
+@media (orientation: portrait){
+    div{
+        flex-basis: 30%;
+        height: 16.66vh;
+    }
+}
+.red {
+    background-color: red;
+}
+.salmon {
+    background-color: salmon;
+}
+.palevioletred {
+    background-color: palevioletred;
+}
+.burlywood {
+    background-color: burlywood;
+}
+.lightskyblue {
+    background-color: lightskyblue;
+}
+.yellow {
+    background-color: yellow;
+}
+.violet {
+    background-color: violet;
+}
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
+}
+.off {
+    background-color: #eee;
+}
+.hidden {
+    background-color: #000;
 }
