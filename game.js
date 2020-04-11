@@ -10,12 +10,13 @@
  let activeCard = "";
  const activeCards = [];
 
- const gamePairs = cards.lenght/2;
+ const gamePairs = cards.length/2;
  let gameResult = 0;
 
  const clickCard = function(){
     activeCard = this;
     activeCard.classList.remove("hidden");
+    if (activeCard == activeCards[0]) return;
 
     if(activeCards.length === 0){
         activeCards[0] = activeCard;
@@ -31,6 +32,8 @@
 
         if(activeCards[0].className === activeCards[1].className){
             activeCards.forEach(card => card.classList.add("off"))
+            gameResult++;
+            cards = cards.filter(card => !card.classList.contains("off"));
             if (gameResult == gamePairs){
                 const endTime = new Date().getTime();
                 const gameTime = (endTime - startTime)/1000;
